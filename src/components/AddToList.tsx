@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 const AddToList = () => {
+    const[input, setInput] = useState({
+        name: "",
+        age: "",
+        note: "",
+        img: ""
+    })
+
+
     return (
         <div className="AddToList">
             <input
@@ -9,15 +17,14 @@ const AddToList = () => {
             className="AddToList-Input"/>
             <input
             type="text"
-            placeholder="Name"
+            placeholder="Age"
             className="AddToList-Input"/>
             <input
             type="text"
-            placeholder="Name"
+            placeholder="Image url"
             className="AddToList-Input"/>
-            <input
-            type="text"
-            placeholder="Name"
+            <textarea
+            placeholder="Notes"
             className="AddToList-Input"/>
         </div>
     )
